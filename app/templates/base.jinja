@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', path='/style.css')|with_version }}">
+  <title>{% block title %}{{ request.app.title }}{% endblock title %}</title>
+</head>
+<body class="{{ request.scope.route.name }}">
+  <h1><a href="{{ request.url }}">{{ self.title() }}</a></h1>
+
+  {% block body %}
+    <h2>Hello</h2>
+  {% endblock body %}
+
+  {% block logs %}
+    {% for msg in log_messages %}
+      <pre>{{ msg }}</pre>
+    {% endfor %}
+  {% endblock logs %}
+
+  {% block scripts %}{% endblock scripts %}
+</body>
+</html>

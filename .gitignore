@@ -1,0 +1,7 @@
+.venv
+.env
+.env.*
+.vscode
+.space
+__pycache__
+scratch

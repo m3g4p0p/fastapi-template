@@ -1,0 +1,22 @@
+strong {
+  font-weight: bold;
+}
+
+.admin dl {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .8em;
+}
+
+.info,
+.error {
+  font-size: 0.8em;
+}
+
+.info {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
